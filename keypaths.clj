@@ -1,3 +1,4 @@
+;; Marshall Abrams
 ;; Ways to list key paths in embedded maps
 
 ;; From 
@@ -6,42 +7,6 @@
 ;; Not included:
 ;; Arthur Ulfeldt's main answer responds to the question behind Ayala's
 ;; question about generating keypaths.
-
-;; David Rz Ayala's original data example:
-(def dra {:a :A :b :B :c {:d :D} :e {:f {:g :G :h :H}}})
-
-;; Other data examples:
-(def b {:b1 {:c1 1, :c2 2} :b2 {:c1 3, :c2 4}})
-
-(def a {:a1 {:b1 {:c1 1, :c2 2} :b2 {:c2 3}} :a2 {:b2 {:c1 4 :c2 5}}}) 
-
-;; Generated in pasta using (snipe-stats (classify-snipes @data$ (.schedule cfg))))
-;; at step 500:
-(def s500 {:k
-           {:east
-            {:pos-pref
-             [26 11.961538461538462 2.1980272425056388E-4 486.2307692307692],
-             :zero-pref [1 10.0 0.0 9.0]},
-            :west
-            {:neg-pref [36 9.083333333333334 -1.4530134491538252E-4 404.75]}},
-           :r
-           {:east
-            {:neg-pref [9 8.0 -1.0 396.55555555555554],
-             :pos-pref [17 15.058823529411764 1.0 385.29411764705884]},
-            :west
-            {:neg-pref [23 13.73913043478261 -1.0 361.0869565217391],
-             :pos-pref [16 7.3125 1.0 200.6875]}},
-           :s
-           {:east
-            {:neg-pref [14 7.857142857142857 -0.5000235997375835 321.0],
-             :pos-pref
-             [19 14.789473684210526 0.52634964567971 319.42105263157896]},
-            :west
-            {:neg-pref
-             [22 15.318181818181818 -0.6818246178871994 420.72727272727275],
-             :pos-pref [15 6.533333333333333 0.4667103734360375 273.0],
-             :zero-pref [2 10.0 0.0 9.0]}},
-           :step 501})
 
 ;; miner49r's:
 (defn miner49r-keypaths
@@ -155,6 +120,7 @@
 ;;     get its first element, i.e. its key
 ;; On each of these branches, we eventually get to a non-map,
 ;; in which case stop processing on that branch and return nothing.
+
 
 ;; If you actually want the leaf node data, you can use the simple
 ;; Specter version without mapping butlast over the result:

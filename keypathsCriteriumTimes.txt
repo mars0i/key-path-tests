@@ -1,3 +1,5 @@
+Marshall Abrams
+
 Speed tests of key path functions from keypaths.clj
 i.e. the functions list all paths through embedded maps by keys
 
