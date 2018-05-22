@@ -8,6 +8,11 @@
 ;; Arthur Ulfeldt's main answer responds to the question behind Ayala's
 ;; question about generating keypaths.
 
+;; NOTE: miner49r noted in an Issue here in 5/2018 that he has revised his SO answer,
+;; and that it's now faster than his old answer, and in fact is faster than all other
+;; solutions.  This recent answer isn't included in this file, but can be found at
+;; https://stackoverflow.com/a/38443772/1455243
+
 ;; miner49r's:
 (defn miner49r-keypaths
   ([m] (miner49r-keypaths [] m))
