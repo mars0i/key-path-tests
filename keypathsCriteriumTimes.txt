@@ -3,6 +3,11 @@ Marshall Abrams
 Speed tests of key path functions from keypaths.clj
 i.e. the functions list all paths through embedded maps by keys
 
+;; NOTE: miner49r noted in an Issue here in 5/2018 that he has revised his SO answer,
+;; and that it's now faster than his old answer, and in fact is faster than all other
+;; solutions.  This recent answer isn't included in this file, but can be found at
+;; https://stackoverflow.com/a/38443772/1455243
+
 Except where noted:
 
 Clojure 1.9.0-alpha14
